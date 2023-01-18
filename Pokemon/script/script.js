@@ -3,7 +3,37 @@ import {creaPagina} from "./modules/pageCreation.js";
 import * as datos from "./modules/datos.js";
 
 // La ventana se carga e inicia los eventos.
-window.addEventListener("load", inicio);
+window.addEventListener("load", carga);
+
+function carga() {
+
+    // Definimos variables.
+    let carga = 0; // Estado de carga actual de la aplicación.
+    let progreso; // Estado de carga actual (en porcentaje) de la aplicación.
+    let contador = document.getElementsByClassName("contador")[0]; // Etiqueta HTML donde se escribe el progreso de la carga.
+    let final = 500; // Tamaño final de la carga.
+    let barraProgreso = document.getElementsByClassName("barraFront")[0];
+    let intervalo = setInterval(() => { // Intervalo para cargar la pantalla.
+
+        carga++;
+        progreso = (carga / final) * 100;
+        progreso = Math.floor(progreso);
+        contador.innerHTML = `Loading...\n${progreso}%`;
+        barraProgreso.style.width = `${progreso}%`;
+
+        // Si la carga llega al final.
+        if (carga >= final) {
+
+            // Cerramos el intervalo.
+            clearInterval(intervalo);
+            let bloque = document.getElementsByClassName("contenedor")[0];
+            bloque.style.display = "none"; // Eliminamos el bloque que es la pantalla de carga.
+
+            // Iniciamos el programa.
+            inicio();
+        }
+    }, 10);
+}
 
 function inicio() {
 
