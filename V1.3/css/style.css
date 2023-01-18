@@ -1,0 +1,282 @@
+body {
+    justify-content: center;
+    background: radial-gradient(white, lightgray);
+    margin: 0 !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+content>header:not(#izqui):not(#dere) {
+
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+
+#logo {
+
+    height: 10%;
+    width: 22%;
+}
+
+.nombre {
+
+    margin-top: 30px;
+}
+
+section>div {
+
+    margin: auto;
+    width: 60%;
+    height: 20%;
+}
+
+.pkm_img {
+
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    border: solid 1px black;
+    box-shadow: 10px 10px 10px 10px lightgray;
+    border-radius: 100px;
+    
+}
+
+.pkm_img>img {
+
+    height: 100%;
+    width: 30%;
+    position: relative;
+    right: 25%;
+}
+
+
+#izqui,
+#dere {
+
+    height: 100%;
+    width: 15%;
+    background-size: 100% 100%;
+}
+
+#izqui {
+
+    left: 0;
+    background-image: url("../img/miraidon.jpg");
+}
+
+#dere {
+
+    right: 0;
+    background-image: url("../img/koraidon.jpg");
+}
+
+content>header div:not(#dere):not(#izqui) {
+
+    padding: 15px 5px;
+    border-bottom: 3px solid lightgray;
+}
+
+#imagen {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/pkm_logo.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+}
+
+b {
+
+    display: block;
+    position: sticky;
+    margin-top: 5px;
+}
+
+b:nth-child(1) {
+
+    font-style: italic;
+    font-size: 1.8em;
+}
+
+b:nth-child(2) {
+
+    color: red;
+    font-size: 1.5em;
+}
+
+b:nth-child(3) {
+
+    color: purple;
+    font-size: 1.5em;
+}
+
+.pkm_img>e {
+
+    padding: 15px;
+    width: 15%;
+    height: 20%;
+    text-align: left;
+    position: absolute;
+    left: 45%;
+    font-size: 1.1em;
+    
+}
+
+.combo {
+
+    background-color: lightgoldenrodyellow;
+    width: 300px;
+    left: 40%;
+    opacity: 0.8;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+}
+
+.combo>i {
+
+    float: right;
+    position: relative;
+}
+
+.combo p {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.forma_pago {
+    background-color: lightgoldenrodyellow;
+    width: 300px;
+    padding: 10px;
+    opacity: 0.8;
+    list-style-type: none;
+    border-radius: 6px;
+    left: 40%;
+    position: absolute;
+}
+
+.forma_pago li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: padding 0.2s linear;
+}
+
+.forma_pago li:hover {
+    background-color: darkgray;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.forma_pago li .fa {
+    margin: 0 10px;
+}
+
+.forma_pago li p {
+    padding-left: 3px;
+}
+
+.forma_pago .fa {
+    transition: transform .2s;
+}
+
+.gira .fa-regular {
+    transform: rotate(180deg);
+}
+
+.oculto {
+    visibility: hidden;
+}
+
+li i {
+
+    height: 40px;
+    width: 40px;
+}
+
+.contenedor {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+    color: black;
+    position: fixed;
+    font-family: cursive;
+    background: radial-gradient(lightgray, white);
+}
+
+.contenedor2 {
+    text-align: center;
+    width: 400px;
+    position: relative;
+}
+
+.furret {
+    background-image: url("../img/furret.gif");
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 200px;
+    width: 400px;
+    transform:rotateY(180deg);
+}
+
+.contador {
+    font-size: 40px;
+}
+
+.barraTras {
+    position: absolute;
+    height: 8px;
+    background-color: lightgray;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.barraFront {
+    position: absolute;
+    height: 8px;
+    background-color: orangered;
+    width: 0%;
+    border-radius: 5px;
+    border: none;
+}
+
+#divContador {
+
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    height: 60px;
+    width: 80px;
+    border: 5px outset green;
+    background-color: lightgreen;
+    text-align: center;
+    font-size: 1.3em;
+    overflow: hidden;
+}
+
+#divContadorWebStorage {
+
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    height: 60px;
+    width: 80px;
+    border: 5px outset green;
+    background-color: lightgreen;
+    text-align: center;
+    font-size: 1.3em;
+    overflow: hidden;
+}
